@@ -3,13 +3,13 @@ import math
 
 class Mais_velha:
 
-    def maior_idade():
+    def maior_idade(self):
         print("Dados da primeira pessoa")
         nome1 = input("Nome: ")
         idade1 = int(input("Idade: "))
         print("Dados da segunda pessoa")
         nome2 = input("Nome: ")
-        idade2 = int(input("Idade"))
+        idade2 = int(input("Idade: "))
 
         if idade1 > idade2:
             print(f"Pessoa mais velha {nome1}")
@@ -19,7 +19,7 @@ class Mais_velha:
 
 class Salario:
     
-    def salario_medio():
+    def salario_medio(self):
         print("Dados do primeiro funcionário")
         nome1 = input("Nome: ")
         salario1 = int(input("Salario: "))
@@ -107,9 +107,11 @@ class Menu:
             if numero == 1:
                 questao = Mais_velha()
                 questao.maior_idade()
+                l = False
             if numero == 2:
                 questao = Salario()
                 questao.salario_medio()
+                l = False
             if numero == 3:
                 largura = int(input("Digite a largura do triangulo"))
                 altura = int(input("Digite a altura do triangulo"))
@@ -118,6 +120,7 @@ class Menu:
                 questao.calcula_area()
                 questao.calcula_diagonal()
                 questao.calcula_perimetro()
+                l = False
             if numero == 4 :
                 nome = int(input("Nome: "))
                 salario = int(input("Salario: "))
@@ -134,3 +137,8 @@ class Menu:
                 l = False
             if numero > 5:
                 print("Opção incorreta")
+            l = False
+                
+                
+start = Menu()
+start.menu()
