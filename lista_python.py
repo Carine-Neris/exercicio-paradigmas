@@ -25,7 +25,7 @@ class Salario:
         salario1 = int(input("Salario: "))
         print("Dados do segundo funcionário")
         nome2 = input("Nome: ")
-        salario2 = int(input("Salario"))
+        salario2 = int(input("Salario: "))
 
         media = (salario1+salario2)/2
         
@@ -64,7 +64,7 @@ class Funcionario:
     
     def aumentar_salario(self,porcentagem):
         self.salario = self.salario + (((self.salario * porcentagem) / 100))
-        print(f'Dados Atualizados {self.funcionario}, R${self.salario}')
+        print(f'Dados Atualizados {self.nome}, R${self.salario}')
 
 class Aluno:
     
@@ -113,22 +113,22 @@ class Menu:
                 questao.salario_medio()
                 l = False
             if numero == 3:
-                largura = int(input("Digite a largura do triangulo"))
-                altura = int(input("Digite a altura do triangulo"))
+                largura = int(input("Digite a largura do triangulo: "))
+                altura = int(input("Digite a altura do triangulo: "))
                 questao = Retangulo(largura, altura)
 
                 questao.calcula_area()
                 questao.calcula_diagonal()
                 questao.calcula_perimetro()
                 l = False
-            if numero == 4 :
-                nome = int(input("Nome: "))
+            if numero == 4:
+                nome = input("Nome: ")
                 salario = int(input("Salario: "))
                 imposto = int(input("Imposto: "))
 
                 questao = Funcionario(nome,salario,imposto)
                 questao.salario_liquido()
-                porcentagem = int(input("Digite a porcentagem para aumentar o sálario"))
+                porcentagem = int(input("Digite a porcentagem para aumentar o sálario: "))
                 questao.aumentar_salario(porcentagem)
             if numero == 5 :
                 questao = Aluno()
